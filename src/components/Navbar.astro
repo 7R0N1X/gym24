@@ -1,0 +1,54 @@
+---
+import "@fontsource/bruno-ace-sc";
+import "@fontsource/kanit/300.css";
+---
+
+<nav
+  class="w-screen max-w-[1169px] flex justify-between items-center px-10 py-5 m-auto"
+>
+  <a href="#" class="text-2xl text-white" id="logo"
+    >GYM<span class="text-[#faff00]">24</span></a
+  >
+
+  <!-- Botón del menú desplegable -->
+  <button type="button" class="text-white sm:hidden" id="btn-menu">
+    <svg fill="none" aria-hidden="true" class="w-6 h-6" viewBox="0 0 17 14">
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 1h15M1 7h15M1 13h15"></path>
+    </svg>
+  </button>
+
+  <!-- Menú desplegable -->
+  <ul
+    id="list-menu"
+    class="hidden max-sm:absolute top-8 sm:flex gap-[75px] [&>li>a]:text-white [&>li>a]:text-xs"
+  >
+    <li><a href="#">Advantages</a></li>
+    <li><a href="#">Membership</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Trainers</a></li>
+  </ul>
+</nav>
+
+<script>
+  const btnMenu = document.getElementById("btn-menu");
+  const listMenu = document.getElementById("list-menu");
+
+  btnMenu.addEventListener("click", function () {
+    listMenu.classList.toggle("hidden");
+  });
+</script>
+
+<style>
+  #logo {
+    font-family: "Bruno Ace SC", system-ui;
+  }
+
+  ul li a {
+    font-family: "Kanit", sans-serif;
+  }
+</style>
