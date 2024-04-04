@@ -1,0 +1,25 @@
+---
+import "@fontsource/kanit";
+import Button from "./Button.astro";
+---
+
+<section>
+  <div class="background h-[480px] w-screen flex flex-col justify-center items-center absolute top-0 z-10">
+    <h1
+      class="text-white text-[40px] font-bold text-center w-[260px] leading-10 mb-7"
+    >
+      Free trial session with a trainer
+    </h1>
+    <Button href="#" name="Detailed" />
+  </div>
+
+  <style>
+    .background {
+      background: url("/background.png") no-repeat center/cover;
+    }
+
+    a {
+      font-family: "Kanit", sans-serif;
+    }
+  </style>
+</section>
