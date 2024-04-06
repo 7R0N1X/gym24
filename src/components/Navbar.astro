@@ -3,12 +3,8 @@ import "@fontsource/bruno-ace-sc";
 import "@fontsource/kanit/300.css";
 ---
 
-<nav
-  class="w-screen max-w-[1169px] flex justify-between items-center px-10 py-5 m-auto relative z-20"
->
-  <a href="#" class="text-2xl text-white" id="logo"
-    >GYM<span class="text-[#faff00]">24</span></a
-  >
+<nav class="w-full max-w-[1169px] flex justify-between items-center p-5">
+  <a href="#" class="text-2xl text-white" id="logo">GYM<span class="text-[#faff00]">24</span></a  >
 
   <!-- Botón del menú desplegable -->
   <button type="button" class="text-white lg:hidden" id="btn-menu">
@@ -23,21 +19,11 @@ import "@fontsource/kanit/300.css";
   </button>
 
   <!-- Menú desplegable -->
-  <ul
-    id="list-menu"
-    class="hidden w-full lg:w-auto max-lg:absolute top-12 left-0 px-10 lg:px-0 [&>li>a]:block [&>li>a]:py-4 mt-1 lg:flex [&>li>a]:text-white bg-[#00000098] lg:bg-transparent"
-  >
-    <li>
-      <a href="#" class="border-b lg:border-none sm:mr-[75px]">Ventajas</a>
-    </li>
-    <li>
-      <a href="#" class="border-b lg:border-none sm:mr-[75px]">Membresía</a>
-    </li>
-    <li>
-      <a href="#" class="border-b lg:border-none sm:mr-[75px]"
-        >Sobre nosotros</a>
-    </li>
-    <li><a href="#">Entrenadores</a></li>
+  <ul id="list-menu" class="hidden bg-[#00000098] lg:bg-transparent w-full lg:w-auto max-lg:absolute top-12 left-0 px-5 lg:px-0 lg:flex">
+    <li><a href="#" class="text-white border-b lg:border-none block py-4 lg:mr-[75px]">Ventajas</a></li>
+    <li><a href="#" class="text-white border-b lg:border-none block py-4 lg:mr-[75px]">Membresía</a></li>
+    <li><a href="#" class="text-white border-b lg:border-none block py-4 lg:mr-[75px]">Sobre nosotros</a></li>
+    <li><a href="#" class="text-white block py-4">Entrenadores</a></li>
   </ul>
 </nav>
 
