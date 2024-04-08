@@ -1,0 +1,40 @@
+---
+import "@fontsource/kanit";
+import Button from "./Button.astro";
+
+interface Props {
+  membership: string;
+  price: string;
+  items: Array<String>;
+  href: string;
+  name: string;
+}
+
+const { membership, price, items, href, name } = Astro.props;
+---
+
+<div class="bg-[#222] w-[280px] min-w-[280px] rounded-xl">
+
+  <div class="border-b-2 border-black py-[22px]">
+    <h2 class="text-white text-lg font-bold text-center">{membership}</h2>
+    <p class="text-white text-2xl font-medium text-center">$ {price}</p>
+  </div>
+
+  <div class="py-7 px-6 flex flex-col items-center">
+    <ul class="flex flex-col gap-y-2 mb-7 overflow-auto h-[150px] ">
+      {
+        items.map((item) => (
+          <li class="text-white font-light text-sm flex"><img src="/check.svg" alt="" class="mr-2" />{item}</li>
+        ))
+      }
+    </ul>
+    <Button href={href} name={name}/>
+  </div>  
+  
+</div>
+
+<style>
+  h2, li{
+    font-family: "Kanit", sans-serif;
+  }
+</style>
