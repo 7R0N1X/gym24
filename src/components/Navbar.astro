@@ -3,7 +3,7 @@ import "@fontsource/bruno-ace-sc";
 import "@fontsource/kanit/300.css";
 ---
 
-<nav class="w-full max-w-[1169px] flex justify-between items-center p-5 fixed top-0 z-20">
+<nav class="w-full max-w-[1169px] flex justify-between items-center p-5 fixed top-0 z-20" id="miNav">
   <a href="#" class="text-2xl text-white" id="logo">GYM<span class="text-[#faff00]">24</span></a  >
 
   <!-- Botón del menú desplegable -->
@@ -34,6 +34,18 @@ import "@fontsource/kanit/300.css";
   btnMenu.addEventListener("click", function () {
     listMenu.classList.toggle("hidden");
   });
+
+  window.addEventListener('scroll', function() {
+  var nav = document.getElementById('miNav');
+  var scrollPosition = window.scrollY;
+  
+  if (scrollPosition > 0) {
+    nav.classList.add('backdrop-blur-sm');
+  } else {
+    nav.classList.remove('backdrop-blur-sm');
+  }
+});
+
 </script>
 
 <style>
