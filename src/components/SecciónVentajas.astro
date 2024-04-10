@@ -1,0 +1,21 @@
+---
+import '@fontsource-variable/inter';
+import Ventaja from "./Ventaja.astro";
+---
+
+<section class="w-full sm:w-[571px] lg:w-auto max-w-[1169px] my-8">
+  <h1 class="text-white text-2xl sm:text-3xl text-center mb-8 uppercase font-bold">Ventajas</h1>
+
+  <section class="flex flex-col flex-wrap justify-center gap-8 lg:flex-row">
+    <Ventaja imagePath="/ventajas/1.svg" alt="" advantage="15.000 m2" description="Un gimnasio espacioso para hacer deporte: una distancia segura entre las máquinas de ejercicio."/>
+    <Ventaja imagePath="/ventajas/2.svg" alt="" advantage="Más de 200 equipos" description="Sin colas en los simuladores. Equipos de primera calidad de LifeStyle, Hammer Strength y TechnoGym."/>
+    <Ventaja imagePath="/ventajas/3.svg" alt="" advantage="4 zonas de fitness" description="Desde cardio hasta funcional y ciclismo. Zona separada para boxeo y artes marciales mixtas."/>
+    <Ventaja imagePath="/ventajas/4.svg" alt="" advantage="Funcionamiento ininterrumpido" description="El gimnasio está abierto las 24 horas del día, también funciona todos los días festivos y fines de semana."/>
+  </section>
+</section>
+
+<style>
+  h1 {
+    font-family: 'Inter Variable', sans-serif;
+  }
+</style>

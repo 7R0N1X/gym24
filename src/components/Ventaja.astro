@@ -1,0 +1,24 @@
+---
+interface Props {
+  imagePath: string;
+  alt: string;
+  advantage: string;
+  description: string;
+}
+
+const { imagePath, alt, advantage, description } = Astro.props;
+---
+
+<div class="flex mx-5 lg:w-[500px]">
+  <img src={imagePath} alt={alt} class="mr-5 mt-2 size-12" />
+  <div class="flex flex-col gap-1">
+    <p class="text-white text-lg font-bold">{advantage}</p>
+    <p class="text-white font-light">{description}</p>
+  </div>
+</div>
+
+<style>
+  p {
+    font-family: 'Inter Variable', sans-serif;
+  }
+</style>
