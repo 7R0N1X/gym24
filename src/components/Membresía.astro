@@ -20,7 +20,7 @@ const { membership, price, items, href, name } = Astro.props;
   </div>
 
   <div class="bg-[#222] rounded-b-xl py-7 px-6 flex flex-col items-center">
-    <ul class="flex flex-col gap-y-4 mb-7 overflow-auto h-[195px]">
+    <ul class="flex flex-col gap-y-4 mb-7 overflow-auto min-h-[200px]">
       {items.map((item) => (
           <li class="text-white font-light sm:leading-5 flex"><div class="mt-1 mr-1"><Check class="size-[22px]"/></div>{item}</li>
         ))}
