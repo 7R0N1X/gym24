@@ -1,25 +1,25 @@
 ---
-import "@fontsource/kanit";
 import Button from "./Button.astro";
 ---
 
-<section class="h-[480px] md:h-[791px] w-full flex flex-col items-center relative z-10" id="background">
-  <div class="h-full w-full max-w-[1169px] flex flex-col justify-center items-center sm:items-start px-5">
-    <h1 class="text-white text-center sm:text-left text-3xl sm:text-5xl lg:text-6xl leading-10 mb-7 w-[300px] sm:w-[500px]">
-      Sesión de prueba gratuita con un entrenador
+<section class="h-[480px] md:h-screen w-full flex flex-col items-center relative z-10" id="background">
+  <div class="h-full w-full max-w-[1320px] flex flex-col justify-center items-center sm:items-start px-5 lg:px-0">
+    <h1 class="text-white font-bold text-center sm:text-left text-2xl sm:text-5xl sm:leading-tight mb-2 w-[300px] sm:w-[539px] uppercase">
+      ¡Empieza tu viaje hacia la salud hoy!
     </h1>
-    <Button href="#" name="Más información" class="bg-[#faff00] py-3 px-10 rounded-[30px] font-bold"/>
+    <p class="hidden md:block text-white text-xl font-medium w-[539px]">Regístrate para una sesión de <span class="text-[#faff00]">prueba gratuita</span> con uno de nuestros entrenadores expertos.</p>
+    <Button href="#" name="¡Reserva tu sesión ahora!" class=" bg-[#faff00] py-3 px-6 rounded-[30px] font-bold uppercase text-sm sm:text-base mt-2 sm:mt-7"/>
   </div>
 </section>
 
 <style>
   #background {
-    background: url("/background.png") no-repeat center/cover;
+    background: url("/background.jpg") no-repeat center/cover;
     mask-image: linear-gradient(black 80%, transparent);
   }
 
   h1 {
-    font-family: "Kanit", sans-serif;
+    font-family: "Inter Variable", sans-serif;
   }
 </style>
  
