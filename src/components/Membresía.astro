@@ -1,6 +1,6 @@
 ---
-import "@fontsource/kanit";
 import Button from "./Button.astro";
+import Check from "../../public/Check.astro";
 
 interface Props {
   membership: string;
@@ -13,28 +13,27 @@ interface Props {
 const { membership, price, items, href, name } = Astro.props;
 ---
 
-<div class="w-[280px] min-w-[280px]" id="container">
+<div class="w-[300px] min-w-[280px]" id="container">
   <div class="bg-[#222] rounded-t-xl border-b-2 border-black py-[22px]" id="top">
     <h2 class="text-white text-lg font-bold text-center">{membership}</h2>
     <p class="text-white text-2xl font-medium text-center">$ {price}</p>
   </div>
 
   <div class="bg-[#222] rounded-b-xl py-7 px-6 flex flex-col items-center">
-    <ul class="flex flex-col gap-y-2 mb-7 overflow-auto h-[150px]">
-      {
-        items.map((item) => (
-          <li class="text-white font-light text-sm flex"><img src="/check.svg" alt="" class="mr-2" />{item}</li>
-        ))
-      }
+    <ul class="flex flex-col gap-y-4 mb-7 overflow-auto h-[195px]">
+      {items.map((item) => (
+          <li class="text-white font-light sm:leading-5 flex"><div class="mt-1 mr-1"><Check class="size-[22px]"/></div>{item}</li>
+        ))}
     </ul>
-    <Button href={href} name={name} class="bg-[#faff00] py-3 px-10 rounded-[30px] font-bold text-sm"/>
+    <Button href={href} name={name} class="bg-[#faff00] py-3 px-6 rounded-[30px] font-bold text-sm uppercase"/>
   </div>
 </div>
 
 <style>
   h2,
-  li {
-    font-family: "Kanit", sans-serif;
+  li,
+  p {
+    font-family: "Inter Variable", sans-serif;
   }
 
   #container:hover #top {
