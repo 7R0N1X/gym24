@@ -1,51 +1,40 @@
----
-import "@fontsource/bruno-ace-sc";
-import "@fontsource/kanit/300.css";
----
+<header class="w-full flex justify-center p-5 fixed top-0 z-20" id="header">
+  <nav class="w-full max-w-[1320px] flex justify-between items-center">
+    <a href="#" class="text-2xl text-white" id="logo"
+      >GYM<span class="text-[#faff00]">24</span></a>
 
-<nav class="w-full max-w-[1169px] flex justify-between items-center p-5 fixed top-0 z-20" id="miNav">
-  <a href="#" class="text-2xl text-white" id="logo">GYM<span class="text-[#faff00]">24</span></a  >
+      <!-- Botón del menú desplegable -->
+      <button type="button" class="text-white lg:hidden" id="btn-menu">
+        <svg fill="none" aria-hidden="true" class="w-6 h-6" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
 
-  <!-- Botón del menú desplegable -->
-  <button type="button" class="text-white lg:hidden" id="btn-menu">
-    <svg fill="none" aria-hidden="true" class="w-6 h-6" viewBox="0 0 17 14">
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M1 1h15M1 7h15M1 13h15"></path>
-    </svg>
-  </button>
+      <!-- Menú desplegable -->
+      <ul id="list-menu" class="hidden w-full bg-black lg:bg-transparent lg:w-auto sm:gap-7 max-lg:absolute top-16 left-0 px-5 lg:px-0 lg:flex [&>li>a]:uppercase ">
+        <li><a href="#" class="text-white text-sm font-semibold lg:text-base border-b lg:border-none block py-4 hover:text-[#faff00]">Ventajas</a></li>
+        <li><a href="#" class="text-white text-sm font-semibold lg:text-base border-b lg:border-none block py-4 hover:text-[#faff00]">Membresía</a></li>
+        <li><a href="#" class="text-white text-sm font-semibold lg:text-base border-b lg:border-none block py-4 hover:text-[#faff00]">Sobre nosotros</a></li>
+        <li><a href="#" class="text-white text-sm font-semibold lg:text-base block py-4 hover:text-[#faff00]">Entrenadores</a></li>
+      </ul>
 
-  <!-- Menú desplegable -->
-  <ul id="list-menu" class="hidden bg-[#00000098] lg:bg-transparent w-full lg:w-auto max-lg:absolute top-12 left-0 px-5 lg:px-0 lg:flex">
-    <li><a href="#" class="text-white border-b lg:border-none block py-4 lg:mr-[75px]">Ventajas</a></li>
-    <li><a href="#" class="text-white border-b lg:border-none block py-4 lg:mr-[75px]">Membresía</a></li>
-    <li><a href="#" class="text-white border-b lg:border-none block py-4 lg:mr-[75px]">Sobre nosotros</a></li>
-    <li><a href="#" class="text-white block py-4">Entrenadores</a></li>
-  </ul>
-</nav>
+  </nav>
+</header>
 
 <script>
   const btnMenu = document.getElementById("btn-menu");
   const listMenu = document.getElementById("list-menu");
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", function () {
+    var scrollPosition = window.scrollY;
+    scrollPosition ? header.classList.add("bg-black") :  header.classList.remove("bg-black");
+  });
 
   btnMenu.addEventListener("click", function () {
     listMenu.classList.toggle("hidden");
+    listMenu.classList.contains("hidden") ? header.classList.remove("bg-black") : header.classList.add("bg-black")
   });
-
-  window.addEventListener('scroll', function() {
-  var nav = document.getElementById('miNav');
-  var scrollPosition = window.scrollY;
-  
-  if (scrollPosition > 0) {
-    nav.classList.add('backdrop-blur-sm');
-  } else {
-    nav.classList.remove('backdrop-blur-sm');
-  }
-});
-
 </script>
 
 <style>
@@ -54,6 +43,6 @@ import "@fontsource/kanit/300.css";
   }
 
   ul li a {
-    font-family: "Kanit", sans-serif;
+    font-family: "Inter Variable", sans-serif;
   }
 </style>
