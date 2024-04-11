@@ -13,19 +13,23 @@ interface Props {
 const { membership, price, items, href, name } = Astro.props;
 ---
 
-<div class="w-[300px] min-w-[280px]" id="container">
-  <div class="bg-[#222] rounded-t-xl border-b-2 border-black py-[22px]" id="top">
+<div class="min-w-[275px] max-w-[275px] min-h-[397px] max-h-[397px] bg-[#222] rounded-xl flex flex-col " id="container">
+  
+  <div class="min-h-[100px] rounded-t-xl border-b-2 border-black flex flex-col justify-center" id="top">
     <h2 class="text-white text-lg font-bold text-center">{membership}</h2>
     <p class="text-white text-2xl font-medium text-center">$ {price}</p>
   </div>
 
-  <div class="bg-[#222] rounded-b-xl py-7 px-6 flex flex-col items-center">
-    <ul class="flex flex-col gap-y-4 mb-7 overflow-auto min-h-[200px]">
+  <div class="bg-[#222] py-6 px-6 flex flex-col items-center flex-grow">
+    <ul class="flex flex-col gap-y-2 overflow-auto">
       {items.map((item) => (
-          <li class="text-white font-light sm:leading-5 flex"><div class="mt-1 mr-1"><Check class="size-[22px]"/></div>{item}</li>
+          <li class="text-white font-light text-sm sm:leading-5 flex"><div class="mt-1 mr-1"><Check class="size-[20px]"/></div>{item}</li>
         ))}
     </ul>
-    <Button href={href} name={name} class="bg-[#faff00] py-3 px-6 rounded-[30px] font-bold text-sm uppercase"/>
+  </div>
+
+  <div class="flex justify-center items-center mb-9">
+    <Button href={href} name={name} class="bg-[#faff00] py-3 px-6 rounded-[30px] font-bold text-xs uppercase"/>
   </div>
 </div>
 
