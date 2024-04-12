@@ -1,4 +1,5 @@
 ---
+import LinkIcon from "./LinkIcon.astro"
 import Instagram from "./icons/social-network/Instagram.astro"
 import Twitter from "./icons/social-network/Twitter.astro"
 import Youtube from "./icons/social-network/Youtube.astro"
@@ -20,9 +21,9 @@ const {imagePath, name, instagram, twitter, youtube} = Astro.props
   </picture>
   <p class="text-lg font-bold my-[18px]">{name}</p>
   <section class="flex gap-4">
-    <a href={instagram} target="_blank" class="hover:text-[#faff00]" aria-label="Instagram"><Instagram class="size-10" /></a>
-    <a href={twitter} target="_blank" class="hover:text-[#faff00]" aria-label="Twitter"><Twitter class="size-10"/></a>
-    <a href={youtube} target="_blank" class="hover:text-[#faff00]" aria-label="Youtube"><Youtube class="size-10"/></a>
+    <LinkIcon href={instagram} name="Instagram"><Instagram class="size-10" /></LinkIcon>
+    <LinkIcon href={twitter} name="Twitter"><Twitter class="size-10"/></LinkIcon>
+    <LinkIcon href={youtube} name="Youtube"><Youtube class="size-10"/></LinkIcon>
   </section>
 
 </div>

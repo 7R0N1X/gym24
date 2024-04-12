@@ -1,0 +1,10 @@
+---
+interface Props {
+  href: string;
+  name: string;
+}
+
+const { href, name } = Astro.props;
+---
+
+<a href={href} target="_blank" class="hover:text-[#faff00]" aria-label={name}><slot /></a>
