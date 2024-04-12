@@ -1,0 +1,15 @@
+---
+interface Props {
+  paths: Array<string>;
+}
+
+const { paths } = Astro.props;
+---
+
+<div class="carousel carousel-center max-w-[388px] sm:max-w-[570px] space-x-3 px-5">
+  {paths.map((path) => (
+  <div class="carousel-item w-full h-full">
+    <img src={path} class="rounded-xl" />
+  </div>
+  ))}
+</div>

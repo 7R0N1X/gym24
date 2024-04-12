@@ -1,0 +1,46 @@
+---
+import Gallery from "./Gallery.astro";
+---
+
+<section class="w-screen max-w-[1000px] my-8 text-white">
+
+  <h1 class="text-2xl sm:text-3xl text-center mb-8 lg:mb-0 uppercase font-bold sm:text-left pl-5">Sobre Nosotros</h1>
+
+  <section class="flex flex-col gap-5 sm:flex-row justify-center items-center">
+
+    <section class="sm:w-10/12">
+
+      <section class="flex flex-col gap-5 w-full px-5">
+        <p class="text-justify text-sm font-light">
+          Gym24, un destacado centro de fitness ubicado cerca de la estación de
+          metro de Grushevka, brinda más de 1.500 metros cuadrados de espacio
+          dedicado a equipos de entrenamiento de alta gama de marcas líderes como
+          Hammer Strength, Life Fitness y TechnoGym.
+        </p>
+  
+        <p class="hidden lg:block text-sm font-light">
+          Ofrece opciones de afiliación asequibles para quienes buscan alcanzar
+          sus objetivos de fitness.
+        </p>
+  
+        <p class="text-justify text-sm font-light">
+          Los entrenadores certificados de Gym24 proporcionan planes de
+          entrenamiento personalizados para cada cliente.
+        </p>
+      </section>
+
+    </section>
+  
+    <section>
+      <Gallery paths={["/gallery/1.webp", "/gallery/2.webp", "/gallery/3.webp", "/gallery/4.webp"]} />
+    </section>
+
+  </section>
+
+</section>
+
+<style>
+  h1, p{
+    font-family: 'Inter Variable', sans-serif;
+  }
+</style>
