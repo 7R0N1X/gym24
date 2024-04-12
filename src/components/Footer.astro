@@ -1,5 +1,6 @@
 ---
 import "@fontsource/bruno-ace-sc";
+import LinkIcon from "./LinkIcon.astro";
 import Instagram from "./icons/social-network/Instagram.astro";
 import Facebook from "./icons/social-network/Facebook.astro";
 import Twitter from "./icons/social-network/Twitter.astro";
@@ -30,10 +31,10 @@ import Email from "./icons/Email.astro";
       <p class="flex text-sm font-light mt-2"><Email class="size-5 mr-2"/>gym24@gmail.com</p>
   
       <section class="flex gap-3 mt-6 sm:mt-4">
-        <a href="https://www.instagram.com/tronix.dev" target="_blank" class="hover:text-[#faff00]" aria-label="Instagram"><Instagram class="size-10 sm:size-8" /></a>
-        <a href="#" target="_blank" class="hover:text-[#faff00]" aria-label="Facebook"><Facebook class="size-10 sm:size-8"/></a>
-        <a href="#" target="_blank" class="hover:text-[#faff00]" aria-label="Twitter"><Twitter class="size-10 sm:size-8"/></a>
-        <a href="#" target="_blank" class="hover:text-[#faff00]" aria-label="Youtube"><Youtube class="size-10 sm:size-8"/></a>
+        <LinkIcon href="https://www.instagram.com/tronix.dev" name="Instagram"><Instagram class="size-10 sm:size-8"/></LinkIcon>
+        <LinkIcon href="#" name="Facebook"><Facebook class="size-10 sm:size-8"/></LinkIcon>
+        <LinkIcon href="#" name="Twitter"><Twitter class="size-10 sm:size-8"/></LinkIcon>
+        <LinkIcon href="#" name="Youtube"><Youtube class="size-10 sm:size-8"/></LinkIcon>
       </section>
     </section>
 

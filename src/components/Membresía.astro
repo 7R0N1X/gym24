@@ -1,5 +1,5 @@
 ---
-import Button from "./Button.astro";
+import LinkButton from "./LinkButton.astro";
 import Check from "./icons/Check.astro";
 
 interface Props {
@@ -29,7 +29,7 @@ const { membership, price, items, href, name } = Astro.props;
   </div>
 
   <div class="flex justify-center items-center mb-9">
-    <Button href={href} name={name} class="bg-[#faff00] py-3 px-6 rounded-[30px] font-bold text-xs uppercase"/>
+    <LinkButton href={href} name={name} class="bg-[#faff00] py-3 px-6 rounded-[30px] font-bold text-xs uppercase"/>
   </div>
 </div>
 
