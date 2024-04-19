@@ -6,7 +6,7 @@ interface Props {
 const { paths } = Astro.props;
 ---
 
-<div class="carousel carousel-center max-w-[388px] sm:max-w-[570px] space-x-3 px-5">
+<div class="carousel carousel-center max-w-[388px] sm:max-w-[570px] space-x-3 px-5" data-glide='{"perView": 1}'>
   {paths.map((path) => (
   <div class="carousel-item w-full h-full">
     <img src={path} class="rounded-xl" />
